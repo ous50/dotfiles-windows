@@ -76,3 +76,8 @@ Set-Alias update System-Update
 
 # Set GVim as default vim
 Set-Alias vim gvim
+
+# Some Linux shell implementation
+Set-Alias which where.exe
+Set-Alias -Name grep -Value Select-String
+function touch ($file) { Write-Output "" >> $file; }
