@@ -1,10 +1,25 @@
-﻿# Jay Harris's dotfiles for Windows
+﻿# Ousfifty's dotfiles for Windows
 
-A collection of PowerShell files for Windows, including common application installation through `Win-Get` and `npm`, and developer-minded Windows configuration defaults.
+A collection of PowerShell files for Windows, including common application installation through `Win-Get` and `npm`, and developer-minded Windows configuration defaults. 
 
-Are you a Mac user? Check out my [dotfiles](https://github.com/jayharris/dotfiles) repository.
+
 
 ## Installation
+
+### Scoop installation
+
+**Note:** You must have your execution policy set to unrestricted (or at least in bypass) for this to work. To set this, run `Set-ExecutionPolicy Unrestricted -Scope CurrentUser`  from a PowerShell running the Scoop installer
+
+Run: 
+
+```
+$env:SCOOP='D:\Applications\Scoop'
+$env:SCOOP_GLOBAL='F:\GlobalScoopApps'
+[Environment]::SetEnvironmentVariable('SCOOP_GLOBAL', $env:SCOOP_GLOBAL, 'Machine')
+irm get.scoop.sh | iex
+```
+
+
 
 ### Using Git and the bootstrap script
 
@@ -25,7 +40,7 @@ Note: You must have your execution policy set to unrestricted (or at least in by
 
 ### Git-free install
 
-> **Note:** You must have your execution policy set to unrestricted (or at least in bypass) for this to work. To set this, run `Set-ExecutionPolicy Unrestricted` from a PowerShell running as Administrator.
+> **Note:** You must have your execution policy set to unrestricted (or at least in bypass) for this to work. To set this, run `Set-ExecutionPolicy Unrestricted` from a PowerShell running as Administrator
 
 To install these dotfiles from PowerShell without Git:
 
