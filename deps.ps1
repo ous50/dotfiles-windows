@@ -28,22 +28,19 @@ Install-Module PSWindowsUpdate -Scope CurrentUser -Force
 # system and cli
 winget install Microsoft.WebPICmd                        --silent --accept-package-agreements
 winget install Git.Git                                   --silent --accept-package-agreements --override "/VerySilent /NoRestart /o:PathOption=CmdTools /Components=""icons,assoc,assoc_sh,gitlfs"""
-winget install OpenJS.NodeJS                             --silent --accept-package-agreements
-winget install Python.Python.3                           --silent --accept-package-agreements
-winget install RubyInstallerTeam.Ruby                    --silent --accept-package-agreements
+
+
+
 
 # browsers
-winget install Google.Chrome                             --silent --accept-package-agreements
-winget install Mozilla.Firefox                           --silent --accept-package-agreements
-winget install Opera.Opera                               --silent --accept-package-agreements
+#winget install Google.Chrome                             --silent --accept-package-agreements
+#winget install Mozilla.Firefox                           --silent --accept-package-agreements
+#winget install Opera.Opera                               --silent --accept-package-agreements
 
 # dev tools and frameworks
-winget install Microsoft.PowerShell                      --silent --accept-package-agreements
+winget install Microsoft.PowerShell.Preview                             --silent --accept-package-agreements
 winget install Microsoft.SQLServer.2019.Developer        --silent --accept-package-agreements
 winget install Microsoft.SQLServerManagementStudio       --silent --accept-package-agreements
-winget install Microsoft.VisualStudio.2022.Professional  --silent --accept-package-agreements --override "--wait --quiet --norestart --nocache --addProductLang En-us --add Microsoft.VisualStudio.Workload.Azure --add Microsoft.VisualStudio.Workload.NetWeb"
-winget install JetBrains.dotUltimate                     --silent --accept-package-agreements --override "/SpecificProductNames=ReSharper;dotTrace;dotCover /Silent=True /VsVersion=17.0"
-winget install Vim.Vim                                   --silent --accept-package-agreements
 winget install WinMerge.WinMerge                         --silent --accept-package-agreements
 winget install Microsoft.AzureCLI                        --silent --accept-package-agreements
 winget install Microsoft.AzureStorageExplorer            --silent --accept-package-agreements

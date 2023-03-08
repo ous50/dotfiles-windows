@@ -77,6 +77,7 @@ My `.\extra.ps1` looks something like this:
 # Hg credentials
 # Not in the repository, to prevent people from accidentally committing under my name
 Set-Environment "EMAIL" "Jay Harris <jay@aranasoft.com>"
+Set-Environment "GPG_KEY" "CF580D011CA40D45"
 
 # Git credentials
 # Not in the repository, to prevent people from accidentally committing under my name
@@ -86,6 +87,9 @@ git config --global user.name $env:GIT_AUTHOR_NAME
 Set-Environment "GIT_AUTHOR_EMAIL" "jay@aranasoft.com"
 Set-Environment "GIT_COMMITTER_EMAIL" $env:GIT_AUTHOR_EMAIL
 git config --global user.email $env:GIT_AUTHOR_EMAIL
+git config --global user.signingkey $env:GPG_KEY
+git config --global commit.gpgsign true
+
 ```
 
 Extras is designed to augment the existing settings and configuration. You could also use `./extra.ps1` to override settings, functions and aliases from my dotfiles repository, but it is probably better to [fork this repository](#forking-your-own-version).
@@ -123,7 +127,7 @@ If you do fork for your own custom configuration, you will need to touch a few f
 
 Within `/setup/install.ps1`, modify the Repository variables.
 ```posh
-$account = "jayharris"
+$account = "ous50"
 $repo    = "dotfiles-windows"
 $branch  = "master"
 ```
